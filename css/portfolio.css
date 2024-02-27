@@ -92,14 +92,3 @@
   }
 
 /*hamburger animation*/
-.navigation.active .bar:first-child {
-    transform: rotate(45deg) translate(7px, 7px);
-  }
-  
-  .navigation.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .navigation.active .bar:last-child {
-    transform: rotate(-45deg) translate(-7px, -7px);
-  }
