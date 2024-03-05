@@ -1,23 +1,33 @@
 /*fonts*/
 @font-face {
     font-family: bevan_regular;
-    src: url(/fonts/bevan_regular) format("truetype");
-
-    font-family: koho_regular;
-    src: url(/fonts/bevan_italic);
-
-    font-family: bevan_italic;
-    src: url(/fonts/bevan_italic);
-
-    font-family: koho_italic;
-    src: url(/fonts/koho_italic);
-
-    font-family: koho_bold;
-    src: url(/fonts/koho_bold);
-
-    font-family: koho_light;
-    src: url(/fonts/koho_light);
+    src: url(../fonts/bevan/bevan_regular.ttf) format("truetype");
 } 
+
+@font-face {
+  font-family: koho_regular;
+  src: url(../fonts/koho/koho_regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: koho_light;
+  src: url(../fonts/koho/koho_light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: koho_bold;
+  src: url(../fonts/koho/koho_bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: koho_semibold;
+  src: url(../fonts/koho/koho_semibold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: koho_italic;
+  src: url(../fonts/koho/koho_italic.ttf) format("truetype");
+}
 
 /*colors*/
 :root {
@@ -31,64 +41,81 @@
 }
 
 * {
-    background-color: var(--background);
-    color: var(--primary-text);
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*hamburger*/
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--textbox-background);
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin-right: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: var(--links-clicked);
-  }
-  
-  .burger {
-    display: none; 
-    cursor: pointer;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--textbox-background);
-    margin-bottom: 5px;
-  }
-  
-  /*for screens smaller than 768px*/
-  @media (max-width: 768px) {
-    .navigation {
-      flex-direction: column;
-      align-items: start;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      margin-top: 10px;
-      display: none;
-    }
-  
-    .burger {
-      display: block;
-    }
-  }
+body {
+  background: var(--background);
+}
 
-/*hamburger animation*/
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--button);
+  padding: 0 25px;
+  transition: 0.3s;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu li a {
+  color: var(--primary-text);
+  text-decoration: none;
+  display: block;
+  padding: 40px 25px;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  box-shadow: 0 -5px 0px var(--accent1) inset;
+}
+
+/*text*/
+h1 {
+  background-color: var(--textbox-background);
+  border-radius: 25px;
+  text-align: center;
+
+  padding: 20px;
+  margin: 10px;
+  font-family: bevan_regular;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+/*image*/
+.image {
+  padding: 10px;
+}
+
+/*footer*/
+footer {
+  background-color: var(--footer);
+}
