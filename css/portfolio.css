@@ -78,6 +78,15 @@ body {
     font-family: koho_bold;
 }
 
+.logo a {
+    display: block;
+}
+
+.logo a img {
+    display: block;
+    width: 10%;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -156,7 +165,7 @@ body {
 
 .hamburger,
 .toggle-menu {
-    /*display: none;*/
+    display: none;
 }
 
 .navigation input:checked ~ .hamburger {
@@ -176,41 +185,40 @@ body {
 }
 
 .navigation input:checked ~ .menu {
-  right: 0;
-  box-shadow: -20px 0 40px rgba(0,0,0,0.3);
+    right: 0;
+    box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
 @media screen and (max-width: 992px) {
     .hamburger,
     .toggle-menu {
-      display: block;
+        display: block;
     }
     .header {
-      padding: 10px 20px;
+        padding: 10px 20px;
     }
     .menu {
-      justify-content: start;
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      right: -300px;
-      background-color: var(--button);
-      width: 300px;
-      height: 100%;
-      padding-top: 65px;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background: var(--button);
+        width: 300px;
+        height: 100%;
+        padding-top: 65px;
     }
     .menu li {
-      width: 100%;
+        width: 100%;
     }
-    .menu li a,
-    .menu li a:hover {
-      padding: 30px;
-      font-size: 24px;
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
-    }
+    .menu li a {
+        padding: 30px;
+        font-size: 20px;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.1) inset;
+    };
 }
-
+  
 /*headers*/
 h1 {
     background-color: var(--textbox-background);
