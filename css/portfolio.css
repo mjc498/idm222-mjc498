@@ -1,4 +1,4 @@
-/*fonts*/
+/* fonts */
 @font-face {
     font-family: bevan_regular;
     src: url(../fonts/bevan/bevan_regular.ttf) format("truetype");
@@ -41,15 +41,14 @@
     font-style: italic;
 }
 
-/*colors*/
+/* colors */
 :root {
     --textbox-background: #5E829C;
     --background: #D4E7F8;
     --primary-text: #20254F;
-    --links-clicked: #E98F5D;
-    --footer: #E98F5D;
-    --button: #E09C9C;
     --accent1: #EAEAEA;
+    --accent2: #E98F5D;
+    --accent3: #E09C9C;
 }
 
 /*all screens*/
@@ -64,7 +63,7 @@ body {
     background: var(--background);
 }
 
-/*navigation bar*/
+/* navigation bar */
 .header {
     position: relative;
     width: 100%;
@@ -72,18 +71,13 @@ body {
     justify-content: space-between;
     align-items: center;
     
-    background: var(--button);
+    background: var(--accent3);
     padding: 0 25px;
     transition: 0.3s;
-    font-family: koho_bold;
-}
-
-.logo a {
-    display: block;
+    font-family: koho_regular;
 }
 
 .logo a img {
-    display: block;
     width: 10%;
 }
 
@@ -98,7 +92,6 @@ body {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    z-index: 1;
     transition: 0.5s;
 }
 
@@ -116,12 +109,12 @@ body {
 }
 
 .menu li a:hover {
-    box-shadow: 0 -5px 0px var(--accent1) inset,
-    500px 0 0 rgba(255, 255, 255, 0.03) inset;
+    box-shadow: 0 -5px 0px var(--accent1) inset;
     padding: 25px;
+    font-family: koho_bold;
 }
 
-/*hamburger*/
+/* hamburger */
 .hamburger {
     position: relative;
     width: 30px;
@@ -146,12 +139,14 @@ body {
 
 .hamburger:before {
     top: -10px;
-    width: 20px;
+    width: 35px;
+    border-radius: 10px;
 }
 
 .hamburger:after {
     top: 10px;
-    width: 25px;
+    width: 35px;
+    border-radius: 10px;
 }
 
 .toggle-menu {
@@ -189,7 +184,7 @@ body {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 768px) {
     .hamburger,
     .toggle-menu {
         display: block;
@@ -204,7 +199,7 @@ body {
         position: fixed;
         top: 0;
         right: -300px;
-        background: var(--button);
+        background: var(--accent3);
         width: 300px;
         height: 100%;
         padding-top: 65px;
@@ -219,70 +214,86 @@ body {
     };
 }
 
-/*headers*/
+/* headers */
 h1 {
     background-color: var(--textbox-background);
     border-radius: 25px;
     text-align: center;
     padding: 20px;
     margin: 10px;
+    margin-top: 30px;
 
     font-family: bevan_regular;
     font-size: 35px;
 }
+
+h1 a {
+    text-decoration: none;
+}
  
 h2 {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
+    padding-left: 12px;
     padding-bottom: 75px;
 
     font-family: bevan_regular;
 }
 
+p {
+    font-size: 16px;
+    padding-left: 12px;
+    font-family: koho_semibold;
+}
+
+/* about + portfolio */
 .options {
+    padding: 100px 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.options a {
     font-family: bevan_regular;
     font-size: 28px;
-    text-align: center;
-    padding: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .options a:hover {
-    color: var(--button);
+    color: var(--accent2);
 }
 
 /*images*/
 .image {
-    padding: 10px;
-    width: 100%;
-    margin: 0 auto;
+    text-align: center;
+    margin: 60px auto;
 }
 
-@media (min-width: 1024px) {
-    .image {
-        max-width: 800px;
-    }
+.image1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--accent3);
+    object-fit: cover;
 }
-
 
 /*footer*/
 footer {
-    background-color: var(--footer);
-}
-
-.footerContainer {
-    width: 100%;
-    padding: 70px 30px 20px;
-}
-
-.socialIcons {
-    display: flex;
-    justify-content: center;
-}
-
-.socialIcons a {
-    text-decoration: none;
+    background-color: var(--accent3);
+    color: var(--primary-text);
     padding: 20px;
-    margin: 10px;
-    background-color: var(--accent1);
-    border-radius: 50%;
-}
+    text-align: center;
+    font-family: koho_regular;
+  }
+
+.footer_text a {
+    text-decoration: none;
+  }
+  
+.footer_text a:hover {
+    color: var(--accent1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
