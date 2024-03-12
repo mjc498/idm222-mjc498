@@ -298,6 +298,29 @@ h6 {
     margin-left: 40px;
 }
 
+.download {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.download a {
+    background-color: var(--accent1);
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    border: 5px solid var(--accent2);
+
+    font-family: bevan_regular;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.download a:hover {
+    color: var(--accent2);
+}
+
 /* contact form*/
 input[type=text], select, textarea {
     width: 100%;
@@ -360,6 +383,16 @@ input[type=submit] {
     object-fit: cover;
 }
 
+.imageComcast,
+.imageCats {
+    border: 5px solid var(--accent2);
+}
+
+.caption {
+    font-family: koho_light;
+    text-align: center;
+}
+
 /*footer*/
 footer {
     background-color: var(--accent3);
@@ -380,3 +413,4 @@ footer {
     transition: color 0.3s ease;
   }
   
+/* carousel */
