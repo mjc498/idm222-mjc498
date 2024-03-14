@@ -340,9 +340,9 @@ p {
         line-height: 30px;
     }
     
-    .image2container {
-        margin: 0 auto;
-        padding: 0 100px;
+    .container {
+        max-width: 500px;
+        padding: 0 20px;
     }
 }
 
@@ -515,9 +515,10 @@ input[type=submit] {
 .container {
     border-radius: 5px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 10px;
     font-family: koho_bold;
     background-color: var(--accent1);
+    max-width: 500px;
   }
 
 /* contact text */
