@@ -521,7 +521,6 @@ input[type=submit] {
     max-width: 500px;
   }
 
-/* contact text */
 .contactText {
     text-align: center;
     margin-top: 20px;
@@ -539,8 +538,20 @@ input[type=submit] {
     margin: 30px auto;
 }
 
-.image2 {
+.image2,
+.imageDesign {
     border: 5px solid var(--accent2);
+}
+
+.imageDesign:hover {
+    opacity: 0.5;
+    transition: 0.3s ease;
+}
+
+.designContainer {
+    margin: 0 auto;
+    width: 300px;
+    height: 500;
 }
 
 /* footer */
