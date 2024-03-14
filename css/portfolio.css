@@ -421,13 +421,6 @@ p {
   }
 
 /* resume */
-.resumeName {
-    font-family: bevan_regular;
-    font-size: 24px;
-    text-align: center;
-    padding-left: 12px;
-}
-
 h3,
 h4,
 h5,
@@ -436,6 +429,25 @@ h6 {
     font-size: 24px;
     margin: 10px;
     margin-bottom: 0;
+}
+
+.resume {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.resumeName {
+    font-family: bevan_regular;
+    font-size: 24px;
+    text-align: center;
+    padding-left: 12px;
+}
+
+.line {
+    border-top: 1px solid var(--accent2);
+    width: 450px;
+    margin: 20px auto;
 }
 
 .list {
