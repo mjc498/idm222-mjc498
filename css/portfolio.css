@@ -51,7 +51,7 @@
     --accent3: #E09C9C;
 }
 
-/*all screens*/
+/* all screens */
 * {
     color: var(--primary-text);
     margin: 0;
@@ -216,15 +216,14 @@ body {
 
 /* headers */
 h1 {
+    font-family: bevan_regular;
+    font-size: 35px;
     background-color: var(--textbox-background);
     border-radius: 25px;
     text-align: center;
     padding: 20px;
     margin: 10px;
     margin-top: 30px;
-
-    font-family: bevan_regular;
-    font-size: 35px;
 }
 
 h1 a {
@@ -239,13 +238,28 @@ h2 {
 }
 
 p {
+    font-family: koho_semibold;
     font-size: 16px;
     padding-left: 12px;
-    font-family: koho_semibold;
+    margin: 10px;
+}
+
+/* home */ 
+.image1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--accent2);
+    object-fit: cover;
+}
+
+.imageContainer {
+    display: flex; 
+    justify-content: center; 
+    margin: 50px auto; 
 }
 
 /* about + portfolio */
-
 .optionsContainer {
     display: flex;
     flex-direction: column;
@@ -274,6 +288,137 @@ p {
 .options a:hover {
     color: var(--accent2);
 }
+
+.desktopText {
+    line-height: 20px;
+}
+
+@media screen and (min-width: 769px) {
+    .homeContainer {
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: left; 
+        margin: 30px auto;
+        margin-bottom: 120px;
+      }
+      
+    .image,
+    .homeText {
+        padding: 20px; 
+        text-align: center; 
+      }
+    
+    .homeText h2 {
+        font-size: 20px; 
+      }
+    
+    .homeText {
+        flex: 1 1 auto; 
+      }
+    
+    .image1 {
+        width: 400px; 
+        height: 400px;
+        margin-right: 20px; 
+        margin-left: 20px;
+      }
+
+    .optionsContainer {
+        justify-content: center; 
+        align-items: center; 
+      }
+
+    .options{
+        width: 700px;
+      }
+    
+    .desktopText {
+        margin: 0 auto;
+        padding: 0 90px;
+        line-height: 30px;
+    }
+    
+    .image2container {
+        margin: 0 auto;
+        padding: 0 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .homeContainer {
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: left; 
+        margin: 30px auto;
+        margin-bottom: 120px;
+      }
+      
+    .image,
+    .homeText {
+        padding: 20px; 
+        text-align: center; 
+      }
+    
+    .homeText h2 {
+        font-size: 24px; 
+      }
+    
+    .homeText {
+        flex: 1 1 auto; 
+      }
+    
+    .image1 {
+        width: 400px; 
+        height: 400px;
+        margin-right: 20px; 
+        margin-left: 60%;
+      }
+      
+    .desktopText {
+        margin: 0 auto;
+        padding: 0 100px;
+        line-height: 30px;
+    }
+    
+    .image2container {
+        margin: 0 auto;
+        padding: 0 100px;
+        width: 900px;
+    }
+}
+
+/* personal */
+.gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+.item {
+    margin: 10px; 
+    text-align: center;
+    position: relative; 
+  }
+
+.imageFood {
+    width: 200px; 
+    height: 200px; 
+    border: 5px solid var(--accent2);
+  }
+  
+.captionFood {
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-60%);
+    color: #eaeaea;
+    padding: 5px; 
+    font-size: 14px; 
+  }
 
 /* resume */
 .resumeName {
@@ -321,7 +466,7 @@ h6 {
     color: var(--accent2);
 }
 
-/* contact form*/
+/* contact form */
 input[type=text], select, textarea {
     width: 100%;
     padding: 10px; 
@@ -370,30 +515,22 @@ input[type=submit] {
 }
 
 /* images */
+.caption {
+    font-family: koho_light;
+    text-align: center;
+    margin: 0;
+}
+
 .image {
     text-align: center;
     margin: 30px auto;
 }
 
-.image1 {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px solid var(--accent2);
-    object-fit: cover;
-}
-
-.imageComcast,
-.imageCats {
+.image2 {
     border: 5px solid var(--accent2);
 }
 
-.caption {
-    font-family: koho_light;
-    text-align: center;
-}
-
-/*footer*/
+/* footer */
 footer {
     background-color: var(--accent3);
     color: var(--primary-text);
@@ -412,5 +549,3 @@ footer {
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
-/* carousel */
