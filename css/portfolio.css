@@ -359,14 +359,6 @@ p {
         font-family: koho_light;
         text-align: center;
     }
-
-    .contact-wrapper {
-        flex-direction: row; /* Align elements side-by-side on larger screens */
-        display: flex; /* Enable flexbox for responsive layout */
-        flex-direction: column; /* Stack elements vertically by default */
-        align-items: center; /* Center elements horizontally by default */
-        margin: 0 auto; /* Center the wrapper horizontally on all screens */
-      }
 }
 
 @media screen and (min-width: 1024px) {
@@ -633,9 +625,7 @@ footer {
   }
 
   .contact-wrapper {
-    flex-direction: row; /* Align elements side-by-side on larger screens */
-    display: flex; /* Enable flexbox for responsive layout */
-    flex-direction: column; /* Stack elements vertically by default */
-    align-items: center; /* Center elements horizontally by default */
-    margin: 0 auto; /* Center the wrapper horizontally on all screens */
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
