@@ -31,7 +31,7 @@
     font-family: koho_bold;
     src: url(../fonts/koho/koho_bold.ttf) format("truetype");
     font-weight: 100;
-    font-style: bold;
+    font-style: normal;
 }
 
 @font-face {
@@ -211,7 +211,7 @@ body {
         padding: 30px;
         font-size: 20px;
         box-shadow: 0 1px 0 rgba(255,255,255,0.1) inset;
-    };
+    }
 }
 
 /* headers */
@@ -593,7 +593,7 @@ input[type=submit] {
 .designBorder {
     margin: 0 auto;
     width: 300px;
-    height: 500;
+    height: 500px;
 }
 
 .design4image {
